@@ -12,3 +12,5 @@ My HelloWorld Collections
 - **spark_data_processing** [Python, Spark]: Do data processing and exploration by Spark for NLP.
 - **spark_machine_learning** [Python, Spark]: Do machine learning by Spark for weather prediction.
 - **machine_learning_algorithm** [R]: Several famous machine learning algorithm introduction, implementation and analysis.
+- **forest_fire_prediction** [R]: Data mining on forest fire dataset, including exploratory data analysis, data preprocessing and machine learning modelling prediction.
+- **twitter_gender_prediction** [Python, TensorFlow]: Modelling on twitter text data to predict the gender of the authors.
