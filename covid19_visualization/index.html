@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>COVID-19 VISUALIZATION</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body class="landing">
+    <div id="page-wrapper">
+        <!--Title Section-->
+        <section class="banner">
+            <div class="content">
+                <header>
+                    <h2>COVID-19 VISUALIZATION</h2>
+                </header>
+            </div>
+        </section>
+        <!--Global Trends Section-->
+        <section>
+            <div class="content" id="global-trend-section" style="width: 1200px">
+                <header>
+                    <h2>Global Trends</h2>
+                    <p class="subtitle">
+                        This section is about the global trends of COVID-19.
+                    </p>
+                </header>
+                <div class="horizontal-list svg-container">
+                    <svg class="line-chart" id="global-trend-left" width="570px" height="400px"></svg>
+                    <svg class="line-chart" id="global-trend-right" width="570px" height="400px"></svg>
+                </div>
+                <p style="text-align: center; color: #616161">
+                    [ Hover the Cursor over the Plots ]
+                </p>
+                <p style="text-align: center; color: #616161">
+                    The new confirmed number is still increasing rapidly.
+                    From the new case trends, the infection rate, and recovery rate trends, the epidemic has 2
+                    significant peaks. Until now, the infection rate is decreasing to close to 0, and the recovered
+                    rate is increasing, so the future of the epidemic is optimistic.
+                </p>
+            </div>
+        </section>
+        <!--Flights Section-->
+        <section>
+            <div class="content" id="flights-section" style="width: 1200px">
+                <header>
+                    <h2>Flights</h2>
+                    <p class="subtitle">
+                        This section is about the influence of COVID-19 on flights.
+                    </p>
+                </header>
+                <div class="horizontal-list svg-container">
+                    <svg class="line-chart" id="flights-trend-left" width="560px" height="400px"></svg>
+                    <svg class="line-chart" id="flights-trend-right" width="560px" height="400px"></svg>
+                </div>
+                <p style="text-align: center; color: #616161">
+                    [ Hover the Cursor over the Plots ]
+                </p>
+                <p style="text-align: center; color: #616161">
+                    From the trends of flights, the number of flights decreases dramatically when the COVID-19
+                    firstly break out. The total number of flights is recovered to the approximate level before epidemic
+                    after the first hit. However, the recovery of commercial flights is weaker than the non-commercial
+                    flights.
+                    From the right plot, the commercial rate is still in a low level.
+                </p>
+            </div>
+        </section>
+        <!--Economy Section-->
+        <section>
+            <div id="economy-section" class="content" style="width: 1200px">
+                <header>
+                    <h2>Economy</h2>
+                    <p class="subtitle">
+                        This section shows the economy influence of COVID-19.
+                    </p>
+                </header>
+
+                <div class="horizontal-list svg-container">
+                    <div style="float:right;width:375px;height:200px">
+                        <label class="selection">
+                            Color:
+                            <select name="economy-world-map-fill" id="economy-world-map-fill">
+                                <option value="gdp_rate">Real GDP</option>
+                                <option value="investment">Investment</option>
+                                <option value="demand">Demand</option>
+                            </select>
+                        </label>
+                        <label class="selection">
+                            Scale:
+                            <select name="economy-world-map-scale" id="economy-world-map-scale">
+                                <option value="linear">Linear</option>
+                                <option value="percentile">Percentile</option>
+                            </select>
+                        </label>
+                        <label class="selection">
+                            Year:
+                            <select name="economy-world-map-year" id="economy-world-map-year">
+                                <option value="oecd_2020">2020</option>
+                                <option value="oecd_2021">2021</option>
+                            </select>
+                        </label>
+                        <p style="color:#616161; text-align: right">
+                            You can change the variables<br/>in the selection bars above.
+                        </p>
+                    </div>
+                    <svg id="economy-world-map" class="world-map" width="580px" height="250px"></svg>
+                    <svg id="economy-color-bar" class="color-bar" width="55px" height="250px"></svg>
+                </div>
+                <p class="world-map-bottom-text" id="economy-world-map-bottom-text" style="color: #616161">
+                    [ Try to Click a Nation ]</p>
+                <div class="horizontal-list svg-container">
+                    <div style="float:right">
+                        <p></p>
+                        <div style="float:right;width:220px;height:190px">
+                            <div id="economy-description-container"
+                                 style="width:220px;height:190px;border:solid 2px;border-radius:10px">
+                                <p style="color: #616161; margin: auto; text-align: center">[ Try to Click a Nation
+                                    ]</p>
+                            </div>
+                        </div>
+                    </div>
+                    <svg class="scatter-chart" id="economy-left" width="420px" height="300px"></svg>
+                    <svg class="scatter-chart" id="economy-right" width="420px" height="300px"></svg>
+                </div>
+                <div>
+                    <p style="text-align: center; color: #616161">
+                        The scatters describes the correlations between the COVID19 confirmed per capita
+                        number to the economy growth rate. From the scatters, the economy in 2020 will be
+                        serious damaged but can get recovered in 2021. Geographically, the most series
+                        region is Europe.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!--Nation Comparison Section-->
+        <section>
+            <div id="nation-comparison-section" class="content" style="padding: 1.5em; width: 1000px">
+                <header>
+                    <h2>Nation Comparison</h2>
+                    <p class="subtitle">
+                        This section is about the nation comparison by COVID-19.
+                    </p>
+                </header>
+                <div class="horizontal-list svg-container">
+                    <div style="float:right;width:250px;height:150px">
+                        <label class="selection">
+                            Color:
+                            <select name="nation-world-map-fill" id="nation-world-map-fill1">
+                                <option value="confirmed">Confirmed</option>
+                                <option value="confirmed_per_capita">Confirmed Per Capita</option>
+                            </select>
+                        </label>
+                        <label class="selection">
+                            Scale:
+                            <select name="nation-world-map-scale" id="nation-world-map-scale1">
+                                <option value="log">Log</option>
+                                <option value="percentile">Percentile</option>
+                                <option value="linear">Linear</option>
+                            </select>
+                        </label>
+                        <p style="color:#616161">
+                            You can change the variables<br/>in the selection bars above.
+                        </p>
+                    </div>
+                    <svg id="nation-comparison-world-map" class="world-map" width="580px" height="250px"></svg>
+                    <svg id="nation-comparison-color-bar" class="color-bar" width="55px" height="250px"></svg>
+                </div>
+                <p id="comparison-world-map-bottom-text" class="world-map-bottom-text" style="color: #616161">
+                    [ Click a Nation to Add to Comparison List ]</p>
+                <div class="horizontal-list svg-container" style="width: 900px">
+                    <svg class="area-chart" id="comparison-left" width="300px" height="310px"></svg>
+                    <svg class="pie-chart" id="comparison-right" width="300px" height="310px"></svg>
+                    <svg class="line-chart" id="comparison-mid" width="300px" height="310px"></svg>
+                </div>
+                <p style="text-align: center; margin-top:0;margin-bottom:10px; color: #616161">
+                    [ Click the Squares Below to Filter ]
+                </p>
+                <div class="svg-container">
+                    <svg class="legend-bottom" id="comparison-legend" width="1080px" height="20px"></svg>
+                    <svg class="legend-bottom" id="comparison-legend2" width="1080px" height="20px"></svg>
+                </div>
+                <p style="text-align: center; margin:0; color: #616161">
+                    From the plots above, most serious nations are US, India and Brazil. From the line chart,
+                    the development of epidemic in all nations are similar.
+                </p>
+            </div>
+        </section>
+        <!--Nation Detail Section-->
+        <section>
+            <div class="content" id="nation-detail-div" style="width: 1200px">
+                <header>
+                    <h2>Nation Detail</h2>
+                    <p class="subtitle">
+                        This section is about the nation detailed information for COVID-19.
+                    </p>
+                </header>
+
+                <div id="nation-detail-description-container"
+                     style="float:right;width:320px;height:360px;border:solid 2px;border-radius:10px">
+                    <p style="color:#616161;margin:5px 5px;text-align:center;font-size:30px">
+                        [ Try to Click a Nation ]</p>
+                </div>
+
+                <div class="horizontal-list svg-container">
+                    <svg id="nation-detail-world-map" class="world-map" width="640px" height="360px"></svg>
+                    <svg id="nation-detail-color-bar" class="color-bar" width="55px" height="360px"></svg>
+                </div>
+                <div class="horizontal-list">
+                    <label class="selection" style="width: 50%; display: inline-block">
+                        Color:
+                        <select name="nation-world-map-fill" id="nation-world-map-fill2">
+                            <option value="confirmed">Confirmed</option>
+                            <option value="confirmed_per_capita">Confirmed Per Capita</option>
+                        </select>
+                    </label>
+                    <label class="selection" style="width: 50%; display: inline-block">
+                        Scale:
+                        <select name="nation-world-map-scale" id="nation-world-map-scale2">
+                            <option value="log">Log</option>
+                            <option value="percentile">Percentile</option>
+                            <option value="linear">Linear</option>
+                        </select>
+                    </label>
+                    <p class="world-map-bottom-text" id="nation-world-map-bottom-text">
+                        [ Select a Nation to Continue ]</p>
+                </div>
+                <div class="horizontal-list svg-container"
+                     style="width: 1200px;margin-top: 0">
+                    <svg class="line-chart" id="nation-detail-left" width="530px" height="0px"></svg>
+                    <svg class="line-chart" id="nation-detail-right" width="530px" height="0px"></svg>
+                </div>
+            </div>
+        </section>
+        <!--Reference Section-->
+        <section>
+            <div class="content">
+                <h2>
+                    Reference
+                </h2>
+                <p style="text-align: left">
+                    ajlkn. (2020). ajlkn/jquery.scrollex. Retrieved from https://github.com/ajlkn/jquery.scrollex <br/>
+
+                    Bostock, M. (2020). D3.js - Data-Driven Documents. Retrieved from https://d3js.org/<br/>
+
+                    Cascading Style Sheets. (2020). Retrieved from https://www.w3.org/Style/CSS/Overview.en.html<br/>
+
+                    d3. (2020). d3/d3-geo-projection. Retrieved from https://github.com/d3/d3-geo-projection<br/>
+
+                    d3. (2020). d3/d3-scale-chromatic. Retrieved from https://github.com/d3/d3-scale-chromatic<br/>
+
+                    Dong, E., Du, H., & Gardner, L. (2020). An interactive web-based dashboard to track COVID-19 in real
+                    time. The Lancet infectious diseases, 20(5), 533-534.<br/>
+
+                    enjalot. (2020). Ian Johnson's Portfolio. Retrieved from https://enjalot.github.io/<br/>
+
+                    Five Design Sheet. (2020). Five Design Sheet | Design Methodology for Visualisation. Retrieved from
+                    http://fds.design/<br/>
+
+                    Flightradar24. (2020). Live Flight Tracker - Real-Time Flight Tracker Map | Flightradar24. Retrieved
+                    from https://www.flightradar24.com/data/statistics<br/>
+
+                    GeoJSON. (2020). GeoJSON. Retrieved from https://geojson.org/<br/>
+
+                    hadley. (2020). hadley/reshape. Retrieved from https://github.com/hadley/reshape<br/>
+
+                    Hecker, A. (2020). Dynamic Colour Scale Legend. Retrieved from
+                    https://bl.ocks.org/starcalibre/6cccfa843ed254aa0a0d<br/>
+
+                    JavaScript. (2020). Free JavaScript training, resources and examples for the community. Retrieved
+                    from https://www.javascript.com/<br/>
+
+                    js.foundation, J. (2020). jQuery. Retrieved 13 November 2020, from https://jquery.com/<br/>
+
+                    material-theme. (2020). material-theme/vsc-material-theme. Retrieved from
+                    https://github.com/material-theme/vsc-material-theme<br/>
+
+                    McConchie, A. (2020). d3 loading GeoJSON + mouse interaction. Retrieved from
+                    http://bl.ocks.org/almccon/a53831a573911d0a875821c5f9fac6be<br/>
+
+                    Nationsonline. (2020). Country Codes List - Nations Online Project. Retrieved from
+                    https://www.nationsonline.org/oneworld/country_code_list.htm<br/>
+
+                    NumPy. (2020). Retrieved from https://numpy.org/<br/>
+
+                    OECD. (2020). OECD Economic Outlook, June 2020. Retrieved from
+                    https://www.oecd.org/economic-outlook/june-2020/<br/>
+
+                    OECD. (2020). OECD.org - OECD. Retrieved from https://www.oecd.org/<br/>
+
+                    Pandas. (2020). pandas - Python Data Analysis Library. Retrieved from
+                    https://pandas.pydata.org/<br/>
+
+                    Python. (2020). Welcome to Python.org. Retrieved from https://www.python.org/<br/>
+
+                    R-project. (2020). R: The R Project for Statistical Computing. Retrieved from
+                    https://www.r-project.org/<br/>
+
+                    susielu. (2020). susielu/d3-annotation. Retrieved from https://github.com/susielu/d3-annotation<br/>
+
+                    tidyverse. (2020). Create Elegant Data Visualisations Using the Grammar of Graphics. Retrieved from
+                    https://ggplot2.tidyverse.org/<br/>
+
+                    tidyverse. (2020). tidyverse/dplyr. Retrieved 2020, from https://github.com/tidyverse/dplyr<br/>
+
+                    W3C HTML. (2020). Retrieved from https://www.w3.org/html/<br/>
+
+                    Worldometer. (2020). Population by Country (2020) - Worldometer. Retrieved from
+                    https://www.worldometers.info/world-population/population-by-country/<br/>
+
+
+                </p>
+            </div>
+        </section>
+        <!--Ending Section-->
+        <section>
+            <div class="content">
+                <header>
+                    <h2>THANK YOU</h2>
+                </header>
+            </div>
+        </section>
+    </div>
+
+    <!--JS Libraries-->
+    <script src="js/d3.v4.min.js"></script>
+    <script src="js/d3-geo-projection.v3.min.js"></script>
+    <script src="js/d3-scale-chromatic.v1.min.js"></script>
+    <script src="js/d3-annotation.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.scrollex.min.js"></script>
+    <script src="js/skel.min.js"></script>
+
+    <!--JS Codes-->
+    <script src="js/utils.js"></script>
+    <script src="js/global-trend-section.js"></script>
+    <script src="js/flights-section.js"></script>
+    <script src="js/economy-section.js"></script>
+    <script src="js/nation-comparison-section.js"></script>
+    <script src="js/nation-detail-section.js"></script>
+</body>
+</html>

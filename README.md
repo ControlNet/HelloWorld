@@ -18,4 +18,5 @@ My HelloWorld Collections
 - **video_summary_generation** [Python]: Analysis video signal, summarize the content and generate collage.
 - **pedestrain_visualization_shiny** [R, shiny]: Visualize pedestrain data by R Shiny.
 - **pedestrain_visualization_d3** [JavaScript, D3.js]: Visualize pedestrain data by D3.js.
+- **covid19_visualization** [JavaScript, D3.js]: COVID theme data visualization by D3.js.
 

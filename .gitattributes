@@ -1,2 +1,5 @@
 *.ipynb linguist-detectable=false
 real_estate_data_integration/secondary-school-ranking.html linguist-detectable=false
+covid19_visualization/js/d3* linguist-detectable=false
+covid19_visualization/js/jquery* linguist-detectable=false
+covid19_visualization/js/skel.min.js linguist-detectable=false

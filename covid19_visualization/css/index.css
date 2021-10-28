@@ -1,0 +1,97 @@
+body {
+    background-color: #181818;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 15px;
+}
+
+.horizontal-list {
+    margin: auto;
+    display: block !important;
+    white-space: nowrap;
+}
+
+.selection {
+    margin: 0 5px;
+    display: inline;
+    height: 2em;
+}
+
+.horizontal-list .line-chart label {
+    display: inline-block;
+}
+
+h1, h2, p {
+    color: white;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+text:not(.annotation-note-title) {
+    fill: white;
+}
+
+#economy-section text.annotation-note-title {
+    fill: #C792EA;
+}
+
+#comparison-right text.annotation-note-title {
+    font-size: 16px;
+}
+
+label {
+    color: white;
+}
+
+path.domain, g.tick line {
+    stroke: white;
+}
+
+div.svg-container {
+    margin: auto
+}
+
+.world-map {
+    margin-left: 45px;
+}
+
+.color-bar {
+    margin-left: 0;
+}
+
+.world-map path {
+    stroke: #000;
+    stroke-width: 0.3px;
+}
+
+.world-map path.selected {
+    stroke: #C792EA;
+    stroke-width: 4px;
+}
+
+#economy-description-container p {
+    margin: 0 5px;
+    font-size: 20px;
+}
+
+#nation-detail-description-container p {
+    margin: 0 5px;
+    font-size: 20px;
+}
+
+#comparison-mid g.line-chart g.points circle {
+    opacity: 0;
+}
+
+#comparison-mid g.line-chart g.points circle.hovered {
+    opacity: 1;
+}
+
+.world-map-bottom-text {
+    text-align: center;
+    margin: 0;
+}
