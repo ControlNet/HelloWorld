@@ -1,0 +1,9 @@
+total 28
+-rwxrw-r-- 1 controlnet controlnet  47 May  9 15:21 dateScript.sh
+-rw-rw-r-- 1 controlnet controlnet  73 May  9 15:25 file1
+-rw-rw-r-- 1 controlnet controlnet  40 May  9 15:26 file2
+-rw-rw-r-- 1 controlnet controlnet  56 May  9 15:26 file3
+-rw-rw-r-- 1 controlnet controlnet   0 May  9 17:01 lsOutput
+-rwxrw-r-- 1 controlnet controlnet 105 May  9 15:33 prog1.sh
+-rw-rw-r-- 1 controlnet controlnet  22 May  9 15:53 set.sh
+-rwxrw-r-- 1 controlnet controlnet  24 May  9 15:36 sortCount.sh
