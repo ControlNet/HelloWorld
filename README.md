@@ -15,6 +15,7 @@ My HelloWorld Collections
 - **forest_fire_prediction** [R]: Data mining on forest fire dataset, including exploratory data analysis, data preprocessing and machine learning modelling prediction.
 - **twitter_gender_prediction** [Python, TensorFlow]: Modelling on twitter text data to predict the gender of the authors.
 - **image_editing_and_analysis** [Python]: Includes image pixel editing, shape and edge detection, and cartoonizer.
+- **bag_of_words_classifier** [Python]: Use bag of words to classify CIFAR10 dataset.
 - **video_summary_generation** [Python]: Analysis video signal, summarize the content and generate collage.
 - **pedestrain_visualization_shiny** [R, shiny]: Visualize pedestrain data by R Shiny.
 - **pedestrain_visualization_d3** [JavaScript, D3.js]: Visualize pedestrain data by D3.js.
